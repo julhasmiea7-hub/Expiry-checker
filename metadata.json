@@ -1,0 +1,6 @@
+{
+  "name": "ShelfGuard Pro - Expiry & Inventory",
+  "description": "Professional mobile-first Product Expiry Checker & Inventory Management System for supermarkets and stores with FEFO tracking, multi-batch monitoring, automated notifications, and PWA support.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

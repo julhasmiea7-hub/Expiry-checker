@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>ShelfGuard Pro - Expiry &amp; Inventory Management</title>
+    <meta name="description" content="Professional supermarket expiry checker and multi-batch inventory management system with FEFO tracking, alerts, and offline PWA support." />
+    <meta property="og:title" content="ShelfGuard Pro - Expiry &amp; Inventory Management" />
+    <meta property="og:description" content="Professional supermarket expiry checker and multi-batch inventory management system with FEFO tracking, alerts, and offline PWA support." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="ShelfGuard" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Suppress benign Vite HMR WebSocket errors in iframe preview per environment instructions -->
+    <script>
+      window.addEventListener('error', function(event) {
+        if (event && event.message && event.message.includes('WebSocket')) {
+          event.stopImmediatePropagation();
+          event.preventDefault();
+        }
+      }, true);
+      window.addEventListener('unhandledrejection', function(event) {
+        if (event && event.reason && (event.reason.message || String(event.reason)).includes('WebSocket')) {
+          event.stopImmediatePropagation();
+          event.preventDefault();
+        }
+      }, true);
+    </script>
+  </head>
+  <body class="bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500/30 selection:text-emerald-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
